@@ -1,11 +1,26 @@
+---
+title: "iris"
+author: "Henrique C Vieira"
+date: "14 de junho de 2017"
+output: html_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)    # load ggplot2 plotting package
 data("iris")
+```
 
+## Iris data
+
+Calculate area of Sepal and Petal
+
+```{r}
 iris$Sepal.area <- iris$Sepal.Length * iris$Sepal.Width
 iris$Petal.area <- iris$Petal.Length * iris$Petal.Width
 
 ggplot(data=iris, aes(x=iris$Sepal.Length, y=iris$Sepal.Width)) + 
   geom_point(aes(size=iris$Sepal.area, colour=iris$Species))
+```
 
 
