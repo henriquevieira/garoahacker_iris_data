@@ -1,6 +1,5 @@
 
 library(ggplot2)    # load ggplot2 plotting package
-
 data("iris")
 
 iris$Sepal.area <- iris$Sepal.Length * iris$Sepal.Width
